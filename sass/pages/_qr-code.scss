@@ -1,45 +1,41 @@
 @use '../helpers/variables' as *;
 @use '../helpers/mixins' as *;
+@use '../helpers/functions' as *;
 
-.qr-wrapper {
-    .qr {
-        @include centerP;
-        text-align: center;
-        min-width: 300px;
-        background: white;
-        padding: 15px {
-            bottom: 30px;
+.qr {
+    text-align: center;
+    min-width: 300px;
+    max-width: 200px;
+    background: white;
+    border-radius: pixelToRem(20px);
+    padding: pixelToRem(20px) {
+        bottom: pixelToRem(30px);
+    }
+    .qr-image {
+        @include flex(center, center);
+        img {
+            display: block;
+            border-radius: pixelToRem(20px);
+            max-width: 100%;
+            flex: 1;
         }
-        border-radius: 10px;
-        @include media(large) {
-            max-width: 200px;
+    }
+    .qr-title {
+        font: {
+            weight: 700;
+            size: 1.6rem;
         }
-        .qr-image {
-            @include media(large) {
-                margin: auto;
-            }
-            img {
-                display: block;
-                border-radius: 10px;
-                max-width: 100%;
-                @include media(large) {
-
-                }
-            }
+        color: $darkBlue;
+        margin: {
+            top: pixelToRem(20px);
+            bottom: pixelToRem(20px);
         }
-        .qr-title {
-            font: {
-                weight: 700;
-                size: 1.6rem;
-            }
-            color: $darkBlue;
-        }
-        .qr-desc {
-            color: #7b879d;
-            font: {
-                weight: 400;
-                size: 1.15rem;
-            }
+    }
+    .qr-desc {
+        color: #7b879d;
+        font: {
+            weight: 400;
+            size: 1.15rem;
         }
     }
 }

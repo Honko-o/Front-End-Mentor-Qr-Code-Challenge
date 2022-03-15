@@ -1,0 +1,9 @@
+/*
+    Function To Convert Pixels to Rem
+*/
+
+@use './variables' as *;
+
+@function pixelToRem($value) {
+    @return ($value / $fontSize) * 1rem;
+}

@@ -37,3 +37,17 @@
         @media (min-width: 992px) {@content};
     }
 }
+
+/* 
+    Flexbox Mixin
+
+    Mixin To Apply Flexbox Properties
+*/
+
+@mixin flex($justify-content: flex-start, $align-items: stretch, $direction: row, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

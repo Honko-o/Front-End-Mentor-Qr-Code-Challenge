@@ -1,9 +1,12 @@
 @use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
 
 html {
     font-size: $fontSize;
 }
 body {
+    @include flex(center, center);
     font-family: 'Outfit', sans-serif;
     background-color: $lightGray;
+    min-height: 100vh;
 }

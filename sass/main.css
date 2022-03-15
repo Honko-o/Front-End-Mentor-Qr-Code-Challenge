@@ -1,14 +1,4 @@
-/* Website Default Font size (use rem to use it) */
 /* Colors */
-html {
-  font-size: 15px;
-}
-
-body {
-  font-family: "Outfit", sans-serif;
-  background-color: #d6e2f0;
-}
-
 /*
     Prefixer Mixin
     Mixin to add Vendor Prefixes to CSS Properties
@@ -23,43 +13,59 @@ body {
 
     Meaningful Media Queries 
 */
-.qr-wrapper .qr {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+/* 
+    Flexbox Mixin
+
+    Mixin To Apply Flexbox Properties
+*/
+html {
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  background-color: #d6e2f0;
+  min-height: 100vh;
+}
+
+/*
+    Function To Convert Pixels to Rem
+*/
+.qr {
   text-align: center;
   min-width: 300px;
+  max-width: 200px;
   background: white;
-  padding: 15px;
-  padding-bottom: 30px;
-  border-radius: 10px;
+  border-radius: 1.3333333333rem;
+  padding: 1.3333333333rem;
+  padding-bottom: 2rem;
 }
-@media (min-width: 992px) {
-  .qr-wrapper .qr {
-    max-width: 200px;
-  }
+.qr .qr-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-@media (min-width: 992px) {
-  .qr-wrapper .qr .qr-image {
-    margin: auto;
-  }
-}
-.qr-wrapper .qr .qr-image img {
+.qr .qr-image img {
   display: block;
-  border-radius: 10px;
+  border-radius: 1.3333333333rem;
   max-width: 100%;
+  flex: 1;
 }
-.qr-wrapper .qr .qr-title {
+.qr .qr-title {
   font-weight: 700;
   font-size: 1.6rem;
   color: #1f3251;
+  margin-top: 1.3333333333rem;
+  margin-bottom: 1.3333333333rem;
 }
-.qr-wrapper .qr .qr-desc {
+.qr .qr-desc {
   color: #7b879d;
   font-weight: 400;
   font-size: 1.15rem;
