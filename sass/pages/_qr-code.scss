@@ -1,0 +1,45 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+
+.qr-wrapper {
+    .qr {
+        @include centerP;
+        text-align: center;
+        min-width: 300px;
+        background: white;
+        padding: 15px {
+            bottom: 30px;
+        }
+        border-radius: 10px;
+        @include media(large) {
+            max-width: 200px;
+        }
+        .qr-image {
+            @include media(large) {
+                margin: auto;
+            }
+            img {
+                display: block;
+                border-radius: 10px;
+                max-width: 100%;
+                @include media(large) {
+
+                }
+            }
+        }
+        .qr-title {
+            font: {
+                weight: 700;
+                size: 1.6rem;
+            }
+            color: $darkBlue;
+        }
+        .qr-desc {
+            color: #7b879d;
+            font: {
+                weight: 400;
+                size: 1.15rem;
+            }
+        }
+    }
+}

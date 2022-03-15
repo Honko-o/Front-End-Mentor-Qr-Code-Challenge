@@ -1,3 +1,68 @@
+/* Website Default Font size (use rem to use it) */
+/* Colors */
+html {
+  font-size: 15px;
+}
 
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #d6e2f0;
+}
+
+/*
+    Prefixer Mixin
+    Mixin to add Vendor Prefixes to CSS Properties
+*/
+/*
+    Center Position Mixin
+
+    Mixin To Center The Element Horizontally and Vertically Using Position
+*/
+/*
+    Media Queries Mixin
+
+    Meaningful Media Queries 
+*/
+.qr-wrapper .qr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  min-width: 300px;
+  background: white;
+  padding: 15px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+@media (min-width: 992px) {
+  .qr-wrapper .qr {
+    max-width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .qr-wrapper .qr .qr-image {
+    margin: auto;
+  }
+}
+.qr-wrapper .qr .qr-image img {
+  display: block;
+  border-radius: 10px;
+  max-width: 100%;
+}
+.qr-wrapper .qr .qr-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #1f3251;
+}
+.qr-wrapper .qr .qr-desc {
+  color: #7b879d;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
 
 /*# sourceMappingURL=main.css.map */

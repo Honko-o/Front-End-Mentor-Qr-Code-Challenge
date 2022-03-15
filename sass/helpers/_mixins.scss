@@ -8,3 +8,32 @@
     }
     #{$property}: $value;
 }
+
+/*
+    Center Position Mixin
+
+    Mixin To Center The Element Horizontally and Vertically Using Position
+*/
+@mixin centerP {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefixer(transform, translate(-50%, -50%), webkit moz o ms);
+}
+
+/*
+    Media Queries Mixin
+
+    Meaningful Media Queries 
+*/
+@mixin media($screenSize) {
+    @if $screenSize == small {
+        @media (min-width: 576px) {@content};
+    }
+    @else if $screenSize == medium {
+        @media (min-width: 768px) {@content};
+    }
+    @else if $screenSize == large {
+        @media (min-width: 992px) {@content};
+    }
+}
