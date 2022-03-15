@@ -1,0 +1,8 @@
+@use '../helpers/variables' as *;
+
+html {
+    font-size: $fontSize;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+}
